@@ -1,4 +1,5 @@
-JavaMPD
+WIP repository.
+~JavaMPD~
 =======
 
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.inthebacklog/javampd/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.inthebacklog/javampd)

@@ -1,6 +1,6 @@
 package org.bff.javampd.monitor;
 
-import com.google.inject.Singleton;
+import javax.inject.Singleton;
 import org.bff.javampd.player.VolumeChangeDelegate;
 import org.bff.javampd.player.VolumeChangeListener;
 import org.bff.javampd.server.Status;

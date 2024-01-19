@@ -1,10 +1,14 @@
 package org.bff.javampd.playlist;
 
+import lombok.NoArgsConstructor;
 import org.bff.javampd.server.MPDProperties;
+
+import javax.inject.Inject;
 
 /**
  * @author bill
  */
+@NoArgsConstructor(onConstructor_ = @Inject)
 public class PlaylistProperties extends MPDProperties {
 
   private enum Command {

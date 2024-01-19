@@ -1,6 +1,6 @@
 package org.bff.javampd.database;
 
-import com.google.inject.Inject;
+import javax.inject.Inject;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;

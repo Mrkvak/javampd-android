@@ -2,7 +2,7 @@ package org.bff.javampd.admin;
 
 import static org.bff.javampd.output.OutputChangeEvent.OUTPUT_EVENT;
 
-import com.google.inject.Inject;
+import javax.inject.Inject;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;

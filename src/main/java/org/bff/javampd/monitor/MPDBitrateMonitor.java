@@ -1,6 +1,6 @@
 package org.bff.javampd.monitor;
 
-import com.google.inject.Singleton;
+import javax.inject.Singleton;
 import java.util.ArrayList;
 import java.util.List;
 import org.bff.javampd.player.BitrateChangeEvent;

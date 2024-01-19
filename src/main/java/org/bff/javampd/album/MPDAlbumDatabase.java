@@ -1,6 +1,6 @@
 package org.bff.javampd.album;
 
-import com.google.inject.Inject;
+import javax.inject.Inject;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;

@@ -1,24 +1,33 @@
 package org.bff.javampd;
 
-import com.google.inject.AbstractModule;
+
+import dagger.Binds;
 import org.bff.javampd.monitor.*;
+import dagger.Module;
 
 /**
  * Initializes the DI bindings
  *
  * @author bill
  */
-public class MPDMonitorModule extends AbstractModule {
-  @Override
-  protected void configure() {
-    bind(StandAloneMonitor.class).to(MPDStandAloneMonitor.class);
-    bind(OutputMonitor.class).to(MPDOutputMonitor.class);
-    bind(TrackMonitor.class).to(MPDTrackMonitor.class);
-    bind(ConnectionMonitor.class).to(MPDConnectionMonitor.class);
-    bind(VolumeMonitor.class).to(MPDVolumeMonitor.class);
-    bind(PlayerMonitor.class).to(MPDPlayerMonitor.class);
-    bind(BitrateMonitor.class).to(MPDBitrateMonitor.class);
-    bind(PlaylistMonitor.class).to(MPDPlaylistMonitor.class);
-    bind(ErrorMonitor.class).to(MPDErrorMonitor.class);
-  }
+@Module
+public abstract class MPDMonitorModule {
+  @Binds
+  abstract StandAloneMonitor bindStandaloneMonitor(MPDStandAloneMonitor mpdClass);
+  @Binds
+  abstract OutputMonitor bindOutputMonitor(MPDOutputMonitor mpdClass);
+  @Binds
+  abstract TrackMonitor bindTrackMonitor(MPDTrackMonitor mpdClass);
+  @Binds
+  abstract ConnectionMonitor bindConnectionMonitor(MPDConnectionMonitor mpdClass);
+  @Binds
+  abstract VolumeMonitor bindVolumeMonitor(MPDVolumeMonitor mpdClass);
+  @Binds
+  abstract PlayerMonitor bindPlayerMonitor(MPDPlayerMonitor mpdClass);
+  @Binds
+  abstract BitrateMonitor bindBitrateMonitor(MPDBitrateMonitor mpdClass);
+  @Binds
+  abstract PlaylistMonitor bindPlaylistMonitor(MPDPlaylistMonitor mpdClass);
+  @Binds
+  abstract ErrorMonitor bindErrorMonitor(MPDErrorMonitor mpdClass);
 }

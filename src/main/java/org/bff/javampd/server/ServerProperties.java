@@ -1,8 +1,13 @@
 package org.bff.javampd.server;
 
+import lombok.NoArgsConstructor;
+
+import javax.inject.Inject;
+
 /**
  * @author bill
  */
+@NoArgsConstructor(onConstructor_ = @Inject)
 public class ServerProperties extends MPDProperties {
 
   private enum Command {

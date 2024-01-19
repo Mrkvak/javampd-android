@@ -1,6 +1,6 @@
 package org.bff.javampd.year;
 
-import com.google.inject.Inject;
+import javax.inject.Inject;
 import java.util.Collection;
 import java.util.stream.Collectors;
 import org.bff.javampd.database.TagLister;

@@ -5,9 +5,14 @@ import static org.bff.javampd.statistics.Statistic.*;
 
 import java.util.EnumMap;
 import java.util.List;
+
+import lombok.NoArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
+import javax.inject.Inject;
+
 @Slf4j
+@NoArgsConstructor(onConstructor_ = @Inject)
 public class MPDStatsConverter implements StatsConverter {
 
   @Override

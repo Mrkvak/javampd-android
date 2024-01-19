@@ -2,11 +2,16 @@ package org.bff.javampd.playlist;
 
 import java.util.List;
 import java.util.Map;
+
+import lombok.NoArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.bff.javampd.song.MPDTagConverter;
 import org.bff.javampd.song.SongProcessor;
 
+import javax.inject.Inject;
+
 @Slf4j
+@NoArgsConstructor(onConstructor_ = @Inject)
 public class MPDPlaylistSongConverter extends MPDTagConverter<MPDPlaylistSong>
     implements PlaylistSongConverter {
 

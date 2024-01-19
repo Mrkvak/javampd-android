@@ -1,7 +1,11 @@
 package org.bff.javampd.player;
 
+import lombok.NoArgsConstructor;
 import org.bff.javampd.server.MPDProperties;
 
+import javax.inject.Inject;
+
+@NoArgsConstructor(onConstructor_ = @Inject)
 public class PlayerProperties extends MPDProperties {
 
   private enum Command {

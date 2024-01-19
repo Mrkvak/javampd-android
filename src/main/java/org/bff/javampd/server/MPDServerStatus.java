@@ -2,7 +2,7 @@ package org.bff.javampd.server;
 
 import static java.lang.Integer.parseInt;
 
-import com.google.inject.Inject;
+import javax.inject.Inject;
 import java.time.LocalDateTime;
 import java.util.Collection;
 import java.util.List;

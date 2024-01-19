@@ -14,6 +14,9 @@ import org.bff.javampd.playlist.Playlist;
 import org.bff.javampd.song.SongSearcher;
 import org.bff.javampd.statistics.ServerStatistics;
 
+import javax.inject.Inject;
+import javax.inject.Singleton;
+
 @Getter
 @NoArgsConstructor
 @Slf4j

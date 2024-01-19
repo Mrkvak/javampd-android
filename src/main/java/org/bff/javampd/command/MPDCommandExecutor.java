@@ -1,8 +1,11 @@
 package org.bff.javampd.command;
 
-import com.google.inject.Singleton;
+import javax.inject.Inject;
+import javax.inject.Singleton;
 import java.util.ArrayList;
 import java.util.List;
+
+import lombok.NoArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.bff.javampd.server.*;
 import org.slf4j.Logger;
@@ -16,6 +19,7 @@ import org.slf4j.LoggerFactory;
  */
 @Singleton
 @Slf4j
+
 public class MPDCommandExecutor implements CommandExecutor {
   private static final Logger LOGGER = LoggerFactory.getLogger(MPDCommandExecutor.class);
 
@@ -25,6 +29,7 @@ public class MPDCommandExecutor implements CommandExecutor {
   private final ServerProperties serverProperties;
 
   /** You <b>MUST</b> call {@link #setMpd} before making any calls to the server */
+  @Inject
   public MPDCommandExecutor() {
     serverProperties = new ServerProperties();
   }

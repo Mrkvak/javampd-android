@@ -1,6 +1,6 @@
 package org.bff.javampd.file;
 
-import com.google.inject.Inject;
+import javax.inject.Inject;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;

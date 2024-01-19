@@ -1,6 +1,6 @@
 package org.bff.javampd.statistics;
 
-import com.google.inject.Inject;
+import javax.inject.Inject;
 import lombok.extern.slf4j.Slf4j;
 import org.bff.javampd.command.CommandExecutor;
 import org.bff.javampd.server.ServerProperties;

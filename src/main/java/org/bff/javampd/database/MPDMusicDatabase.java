@@ -1,7 +1,7 @@
 package org.bff.javampd.database;
 
-import com.google.inject.Inject;
-import com.google.inject.Singleton;
+import javax.inject.Inject;
+import javax.inject.Singleton;
 import org.bff.javampd.album.AlbumDatabase;
 import org.bff.javampd.artist.ArtistDatabase;
 import org.bff.javampd.file.FileDatabase;

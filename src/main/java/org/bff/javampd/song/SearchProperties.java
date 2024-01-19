@@ -1,10 +1,14 @@
 package org.bff.javampd.song;
 
+import lombok.NoArgsConstructor;
 import org.bff.javampd.server.MPDProperties;
+
+import javax.inject.Inject;
 
 /**
  * @author bill
  */
+@NoArgsConstructor(onConstructor_ = @Inject)
 public class SearchProperties extends MPDProperties {
   private enum Command {
     FIND("db.find"),

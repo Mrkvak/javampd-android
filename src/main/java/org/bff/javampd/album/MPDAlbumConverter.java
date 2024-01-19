@@ -1,7 +1,11 @@
 package org.bff.javampd.album;
 
 import java.util.*;
+
+import lombok.NoArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+
+import javax.inject.Inject;
 
 /**
  * Converts a response from the server to an {@link MPDAlbum}
@@ -9,6 +13,7 @@ import lombok.extern.slf4j.Slf4j;
  * @author bill
  */
 @Slf4j
+@NoArgsConstructor(onConstructor_ = @Inject)
 public class MPDAlbumConverter implements AlbumConverter {
 
   private static final String DELIMITING_PREFIX = AlbumProcessor.getDelimitingPrefix();

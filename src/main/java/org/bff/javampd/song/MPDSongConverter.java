@@ -3,9 +3,14 @@ package org.bff.javampd.song;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
+
+import lombok.NoArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
+import javax.inject.Inject;
+
 @Slf4j
+@NoArgsConstructor(onConstructor_ = @Inject)
 public class MPDSongConverter extends MPDTagConverter<MPDSong> implements SongConverter {
 
   @Override

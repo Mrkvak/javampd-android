@@ -1,15 +1,12 @@
 package org.bff.javampd.server;
 
-import com.google.inject.Guice;
-import com.google.inject.Injector;
-import com.google.inject.Singleton;
+
+import javax.inject.Singleton;
 import java.net.InetAddress;
 import java.util.Optional;
 import lombok.Builder;
 import lombok.Getter;
-import org.bff.javampd.MPDDatabaseModule;
-import org.bff.javampd.MPDModule;
-import org.bff.javampd.MPDMonitorModule;
+import org.bff.javampd.*;
 import org.bff.javampd.admin.Admin;
 import org.bff.javampd.art.ArtworkFinder;
 import org.bff.javampd.command.CommandExecutor;
@@ -64,27 +61,29 @@ public class MPD extends MPDServer {
   }
 
   void init() {
-    var injector =
-        Guice.createInjector(new MPDModule(), new MPDDatabaseModule(), new MPDMonitorModule());
+    //var injector =
+//        Guice.createInjector(new MPDModule(), new MPDDatabaseModule(), new MPDMonitorModule());
 
-    bind(injector);
+    MPDComponent mpdComponent = DaggerMPDComponent.create();
+    bind(mpdComponent);
+
+
     setMpd(this);
     authenticate();
-    injector.getInstance(ConnectionMonitor.class).setServer(this);
+    //injector.getInstance(ConnectionMonitor.class).setServer(this);
   }
 
-  private void bind(Injector injector) {
-    serverProperties = injector.getInstance(ServerProperties.class);
-    player = injector.getInstance(Player.class);
-    playlist = injector.getInstance(Playlist.class);
-    admin = injector.getInstance(Admin.class);
-    serverStatistics = injector.getInstance(ServerStatistics.class);
-    serverStatus = injector.getInstance(ServerStatus.class);
-    musicDatabase = injector.getInstance(MusicDatabase.class);
-    songSearcher = injector.getInstance(SongSearcher.class);
-    commandExecutor = injector.getInstance(CommandExecutor.class);
-    artworkFinder = injector.getInstance(ArtworkFinder.class);
-    standAloneMonitor = injector.getInstance(StandAloneMonitor.class);
+  private void bind(MPDComponent component) {
+    serverProperties = component.serverProperties();
+    player = component.player();
+    admin = component.admin();
+    serverStatistics = component.serverStatistics();
+    serverStatus = component.serverStatus();
+    musicDatabase = component.musicDatabase();
+    songSearcher = component.songSearcher();
+    commandExecutor = component.commandExecutor();
+    artworkFinder = component.artworkFinder();
+    standAloneMonitor = component.standaloneMonitor();
   }
 
   void authenticate() {
