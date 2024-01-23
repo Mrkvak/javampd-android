@@ -1,9 +1,8 @@
 package org.bff.javampd;
 
-import lombok.NoArgsConstructor;
-
-import javax.inject.Inject;
 import java.time.LocalDateTime;
+import javax.inject.Inject;
+import lombok.NoArgsConstructor;
 
 @NoArgsConstructor(onConstructor_ = @Inject)
 public class MPDSystemClock implements Clock {

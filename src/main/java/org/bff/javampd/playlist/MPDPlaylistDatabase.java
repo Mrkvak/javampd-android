@@ -1,11 +1,11 @@
 package org.bff.javampd.playlist;
 
-import javax.inject.Inject;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
+import javax.inject.Inject;
 import org.bff.javampd.command.CommandExecutor;
 import org.bff.javampd.database.DatabaseProperties;
 import org.bff.javampd.database.TagLister;

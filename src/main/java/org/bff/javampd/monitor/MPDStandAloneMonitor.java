@@ -1,8 +1,8 @@
 package org.bff.javampd.monitor;
 
+import java.util.concurrent.Executors;
 import javax.inject.Inject;
 import javax.inject.Singleton;
-import java.util.concurrent.Executors;
 import org.bff.javampd.output.OutputChangeListener;
 import org.bff.javampd.player.*;
 import org.bff.javampd.playlist.PlaylistBasicChangeListener;

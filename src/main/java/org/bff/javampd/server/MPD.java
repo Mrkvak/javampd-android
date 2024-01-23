@@ -1,22 +1,11 @@
 package org.bff.javampd.server;
 
-
-import javax.inject.Singleton;
 import java.net.InetAddress;
 import java.util.Optional;
+import javax.inject.Singleton;
 import lombok.Builder;
 import lombok.Getter;
 import org.bff.javampd.*;
-import org.bff.javampd.admin.Admin;
-import org.bff.javampd.art.ArtworkFinder;
-import org.bff.javampd.command.CommandExecutor;
-import org.bff.javampd.database.MusicDatabase;
-import org.bff.javampd.monitor.ConnectionMonitor;
-import org.bff.javampd.monitor.StandAloneMonitor;
-import org.bff.javampd.player.Player;
-import org.bff.javampd.playlist.Playlist;
-import org.bff.javampd.song.SongSearcher;
-import org.bff.javampd.statistics.ServerStatistics;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -61,16 +50,16 @@ public class MPD extends MPDServer {
   }
 
   void init() {
-    //var injector =
-//        Guice.createInjector(new MPDModule(), new MPDDatabaseModule(), new MPDMonitorModule());
+    // var injector =
+    //        Guice.createInjector(new MPDModule(), new MPDDatabaseModule(), new
+    // MPDMonitorModule());
 
     MPDComponent mpdComponent = DaggerMPDComponent.create();
     bind(mpdComponent);
 
-
     setMpd(this);
     authenticate();
-    //injector.getInstance(ConnectionMonitor.class).setServer(this);
+    // injector.getInstance(ConnectionMonitor.class).setServer(this);
   }
 
   private void bind(MPDComponent component) {
@@ -84,6 +73,7 @@ public class MPD extends MPDServer {
     commandExecutor = component.commandExecutor();
     artworkFinder = component.artworkFinder();
     standAloneMonitor = component.standaloneMonitor();
+    playlist = component.playlist();
   }
 
   void authenticate() {

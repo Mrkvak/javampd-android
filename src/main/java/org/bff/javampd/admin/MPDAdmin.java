@@ -2,11 +2,11 @@ package org.bff.javampd.admin;
 
 import static org.bff.javampd.output.OutputChangeEvent.OUTPUT_EVENT;
 
-import javax.inject.Inject;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
+import javax.inject.Inject;
 import lombok.extern.slf4j.Slf4j;
 import org.bff.javampd.command.CommandExecutor;
 import org.bff.javampd.output.MPDOutput;

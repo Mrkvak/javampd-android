@@ -1,11 +1,9 @@
 package org.bff.javampd.monitor;
 
-import javax.inject.Inject;
-import javax.inject.Singleton;
 import java.util.ArrayList;
 import java.util.List;
-
-import lombok.NoArgsConstructor;
+import javax.inject.Inject;
+import javax.inject.Singleton;
 import org.bff.javampd.server.ConnectionChangeEvent;
 import org.bff.javampd.server.ConnectionChangeListener;
 import org.bff.javampd.server.Server;

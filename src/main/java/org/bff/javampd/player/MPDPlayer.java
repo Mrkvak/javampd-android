@@ -1,9 +1,9 @@
 package org.bff.javampd.player;
 
-import javax.inject.Inject;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import javax.inject.Inject;
 import org.bff.javampd.audioinfo.MPDAudioInfo;
 import org.bff.javampd.command.CommandExecutor;
 import org.bff.javampd.playlist.MPDPlaylistSong;

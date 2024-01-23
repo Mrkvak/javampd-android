@@ -1,9 +1,8 @@
 package org.bff.javampd.admin;
 
+import javax.inject.Inject;
 import lombok.NoArgsConstructor;
 import org.bff.javampd.server.MPDProperties;
-
-import javax.inject.Inject;
 
 @NoArgsConstructor(onConstructor_ = @Inject)
 public class AdminProperties extends MPDProperties {

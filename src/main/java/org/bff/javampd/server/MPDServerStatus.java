@@ -2,11 +2,11 @@ package org.bff.javampd.server;
 
 import static java.lang.Integer.parseInt;
 
-import javax.inject.Inject;
 import java.time.LocalDateTime;
 import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
+import javax.inject.Inject;
 import org.bff.javampd.Clock;
 import org.bff.javampd.command.CommandExecutor;
 import org.slf4j.Logger;

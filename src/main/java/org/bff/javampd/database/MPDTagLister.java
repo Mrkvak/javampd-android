@@ -1,9 +1,9 @@
 package org.bff.javampd.database;
 
-import javax.inject.Inject;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import javax.inject.Inject;
 import org.bff.javampd.command.CommandExecutor;
 
 /**

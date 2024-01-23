@@ -2,10 +2,10 @@ package org.bff.javampd.monitor;
 
 import static org.bff.javampd.monitor.PlayerStatus.*;
 
-import javax.inject.Inject;
-import javax.inject.Singleton;
 import java.util.ArrayList;
 import java.util.List;
+import javax.inject.Inject;
+import javax.inject.Singleton;
 import org.bff.javampd.player.PlayerBasicChangeEvent;
 import org.bff.javampd.player.PlayerBasicChangeListener;
 import org.bff.javampd.server.Status;

@@ -1,8 +1,8 @@
 package org.bff.javampd.monitor;
 
-import javax.inject.Singleton;
 import java.util.ArrayList;
 import java.util.List;
+import javax.inject.Singleton;
 import org.bff.javampd.player.BitrateChangeEvent;
 import org.bff.javampd.player.BitrateChangeListener;
 import org.bff.javampd.server.Status;

@@ -1,10 +1,10 @@
 package org.bff.javampd.genre;
 
-import javax.inject.Inject;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
+import javax.inject.Inject;
 import org.bff.javampd.database.TagLister;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

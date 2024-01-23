@@ -1,11 +1,9 @@
 package org.bff.javampd.album;
 
 import java.util.*;
-
+import javax.inject.Inject;
 import lombok.NoArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-
-import javax.inject.Inject;
 
 /**
  * Converts a response from the server to an {@link MPDAlbum}

@@ -36,28 +36,40 @@ import org.bff.javampd.statistics.StatsConverter;
 public abstract class MPDModule {
   @Binds
   abstract Admin bindAdmin(MPDAdmin mpdClass);
+
   @Binds
   abstract Player bindPlayer(MPDPlayer mpdClass);
+
   @Binds
   abstract Playlist bindPlaylist(MPDPlaylist mpdClass);
+
   @Binds
   abstract ServerStatus bindServerStatus(MPDServerStatus mpdClass);
+
   @Binds
   abstract ServerStatistics bindServerStatistics(MPDServerStatistics mpdClass);
+
   @Binds
   abstract CommandExecutor bindCommandExecutor(MPDCommandExecutor mpdClass);
+
   @Binds
   abstract TagLister bindTagLister(MPDTagLister mpdClass);
+
   @Binds
   abstract SongConverter bindSongConverter(MPDSongConverter mpdClass);
+
   @Binds
   abstract PlaylistSongConverter bindPlaylistSongConverter(MPDPlaylistSongConverter mpdClass);
+
   @Binds
   abstract AlbumConverter bindAlbumConverter(MPDAlbumConverter mpdClass);
+
   @Binds
   abstract ArtworkFinder bindArtworkFinder(MPDArtworkFinder mpdClass);
+
   @Binds
   abstract StatsConverter bindStatsConverter(MPDStatsConverter mpdClass);
+
   @Binds
   abstract Clock bindClock(MPDSystemClock mpdClass);
 }

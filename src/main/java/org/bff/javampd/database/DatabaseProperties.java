@@ -1,9 +1,8 @@
 package org.bff.javampd.database;
 
+import javax.inject.Inject;
 import lombok.NoArgsConstructor;
 import org.bff.javampd.server.MPDProperties;
-
-import javax.inject.Inject;
 
 /**
  * @author bill
